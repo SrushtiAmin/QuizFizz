@@ -1,0 +1,475 @@
+:root{
+  --white: #FFFFFF;
+  --blue: #2C24FF;
+  --black:  #000000;
+  --light-blue:#D0CFFD;
+  --dark-blue: #040080;
+  --lilac:#8885FF;
+  --indigo:#040080;
+  --grey: #cccccc;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+}
+/**********LoginPage********/
+.container {
+  text-align: center;
+  padding-top: 70px; 
+}
+
+.main-content h1 {
+  font-family: 'Jaro';
+  color: var(--blue);
+  font-size: 44px;
+  margin-top: 30px; 
+}
+
+.main-content {
+  font-family: 'Titillium Web';
+  color: var(--black);
+  font-size: 20px;
+  margin-top: 20px; 
+}
+.header {
+  background-color: var(--blue);
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
+}
+
+.logo {
+  display: flex;
+  justify-content: center; 
+  padding-top: 50px; 
+}
+
+.logo-img {
+  max-width: 100%; 
+  width: 250px; 
+  height: auto;
+}
+.auth-buttons .btn {
+  background-color: var(--light-blue) ;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+  justify-content: end;
+  font-family: 'Calistoga', cursive; 
+  font-weight: bold; 
+  font-size: 16px; 
+}
+
+
+.steps {
+  background-color: var(--light-blue);
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--blue); 
+}
+
+.steps h2 {
+  color: var(--dark-blue) ;
+  font-weight: bold;
+}
+
+.steps h2 span {
+  color: var(--blue);
+  font-weight: bold;
+}
+.steps p {
+  color: var(--dark-blue);
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.steps strong{
+  color:var(--blue);
+}
+
+.steps span{
+  color:var(--blue);
+}
+
+.cta {
+  margin-top: 20px;
+}
+
+.cta-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/********SignUp***********/
+/* Main container styling */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  font-family: 'Arial', sans-serif;
+  color: var(--black);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header logo section */
+.signup-header {
+  margin-top: 20px;
+}
+
+.logo-image {
+  width: 100%;
+}
+
+/* Main content layout */
+.signup-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+/* Left Side: Signup Form */
+.signup-form {
+  flex: 1;
+  max-width: 400px;
+  background-color: var(--light-blue);
+  margin-top: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.signup-form h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--indigo);
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: var(--black);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.2);
+}
+
+/* Sign-Up Button */
+.signup-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--light-blue);
+  color: var(--black)
+}
+
+/* Link to Login */
+.signin-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* OR Section */
+.or-section {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.or-section span {
+  padding: 0 10px;
+}
+
+.or-section::before,
+.or-section::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: var(--black);
+}
+
+/* Google Signup Button */
+.google-signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 50px;
+  padding:  10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 20px auto 0 auto;
+}
+
+.google-signup-btn img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.google-signup-btn:hover {
+  background-color: var(--light-blue);
+  color: var(--black);
+}
+
+/* Right Side: Illustration */
+.signup-illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-img {
+  width: 100%;
+  max-width: 500px;
+}
+/*************SignIn***********/
+/* Container */
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--white);
+}
+
+/* Header Section */
+.signin-header {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signin-logo {
+  width: 250px; 
+  max-width: 90%;
+  display: inline-block;
+}
+
+/* Main Layout */
+.signin-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-grow: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+/* Left Side: Illustration */
+.signin-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration-img-signin {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Side: Sign-In Form */
+.signin-form {
+  flex: 1;
+  max-width: 400px;
+  background-color: var(--light-blue);
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-form h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--indigo);
+  text-align: center;
+  margin-top: -10px;
+}
+
+.signin-form p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+  color: var(--indigo);
+}
+
+.form-group-signin {
+  margin-bottom: 20px;
+}
+
+.form-group-signin label {
+  display: block;
+  font-size: 14px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.form-group-signin input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group-signin input:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+}
+
+/* Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: var(--blue);
+  font-style: bold;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.signin-btn {
+  width: 100%;
+  background-color: var(--blue);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signin-btn:hover {
+  background-color: var(--light-blue);
+  color: var(--black);
+}
+
+/* Sign-Up Link */
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--black);
+}
+
+.signup-link a {
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .signin-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .signin-illustration {
+    margin-bottom: 20px;
+  }
+
+  .signin-form {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+

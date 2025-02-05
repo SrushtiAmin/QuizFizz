@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import google from "../assets/google.png";
-import logo from "../assets/logo.png";
-import signup from "../assets/signup.png";
+import google from "../../assets/google.png";
+import logo from "../../assets/logo.png";
+import signup from "../../assets/signup.png";
+import './SignUp.css'
 
 function SignUp() {
   return (

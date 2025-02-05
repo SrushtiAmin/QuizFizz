@@ -1,0 +1,177 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    font-family: 'Arial', sans-serif;
+    color: var(--black);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Header logo section */
+  .signup-header {
+    margin-top: 20px;
+  }
+  
+  .logo-image {
+    width: 100%;
+  }
+  
+  /* Main content layout */
+  .signup-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+  }
+  
+  /* Left Side: Signup Form */
+  .signup-form {
+    flex: 1;
+    max-width: 400px;
+    background-color: var(--light-blue);
+    margin-top: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .signup-form h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--indigo);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: var(--black);
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--light-blue);
+    box-shadow: 0 0 0 3px rgba(76, 110, 245, 0.2);
+  }
+  
+  /* Sign-Up Button */
+  .signup-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background-color: var(--light-blue);
+    color: var(--black)
+  }
+  
+  /* Link to Login */
+  .signin-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .signin-link a {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .signin-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* OR Section */
+  .or-section {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .or-section span {
+    padding: 0 10px;
+  }
+  
+  .or-section::before,
+  .or-section::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: var(--black);
+  }
+  
+  /* Google Signup Button */
+  .google-signup-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 50px;
+    padding:  10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto 0 auto;
+  }
+  
+  .google-signup-btn img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  .google-signup-btn:hover {
+    background-color: var(--light-blue);
+    color: var(--black);
+  }
+  
+  /* Right Side: Illustration */
+  .signup-illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .illustration-img {
+    width: 100%;
+    max-width: 500px;
+  }
+  

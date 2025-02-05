@@ -1,0 +1,105 @@
+.container {
+    text-align: center;
+    padding-top: 70px; 
+  }
+  
+  .main-content h1 {
+    font-family: 'Jaro';
+    color: var(--blue);
+    font-size: 44px;
+    margin-top: 30px; 
+  }
+  
+  .main-content {
+    font-family: 'Titillium Web';
+    color: var(--black);
+    font-size: 20px;
+    margin-top: 20px; 
+  }
+  .header {
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center; 
+    padding-top: 50px; 
+  }
+  
+  .logo-img {
+    max-width: 100%; 
+    width: 250px; 
+    height: auto;
+  }
+  .auth-buttons .btn {
+    background-color: var(--light-blue) ;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: end;
+    font-family: 'Calistoga', cursive; 
+    font-weight: bold; 
+    font-size: 16px; 
+  }
+  
+  
+  .steps {
+    background-color: var(--light-blue);
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--blue); 
+  }
+  
+  .steps h2 {
+    color: var(--dark-blue) ;
+    font-weight: bold;
+  }
+  
+  .steps h2 span {
+    color: var(--blue);
+    font-weight: bold;
+  }
+  .steps p {
+    color: var(--dark-blue);
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 600;
+  }
+  
+  .steps strong{
+    color:var(--blue);
+  }
+  
+  .steps span{
+    color:var(--blue);
+  }
+  
+  .cta {
+    margin-top: 20px;
+  }
+  
+  .cta-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }

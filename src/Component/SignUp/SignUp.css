@@ -15,7 +15,9 @@
   }
   
   .logo-image {
-    width: 100%;
+    width: 250px; 
+    max-width: 90%;
+    display: inline-block;
   }
   
   /* Main content layout */

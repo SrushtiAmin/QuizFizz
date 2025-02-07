@@ -55,11 +55,14 @@ const SignIn = () => {
           <form onSubmit={signinUser}>
             <div className="form-group-signin">
               <label htmlFor="email">Email Address</label>
-              <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" placeholder="Enter your email" />
+              <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="email" placeholder="Enter your email"
+              required />
             </div>
             <div className="form-group-signin">
               <label htmlFor="password">Password</label>
-              <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" id="password" placeholder="Enter your password" />
+              <input onChange={(e) => setPassword(e.target.value)} value={password} type="password" id="password" placeholder="Enter your password" 
+              required
+              minLength={6}/>
             </div>
             <div className="forgot-password">
               <a href="#">Forgot password?</a>

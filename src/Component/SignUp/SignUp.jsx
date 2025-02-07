@@ -65,6 +65,7 @@ const SignUp = () => {
                                 type="text" 
                                 id="name" 
                                 placeholder="Enter your name" 
+                                required
                             />
                         </div>
                         <div className="form-group">
@@ -75,6 +76,7 @@ const SignUp = () => {
                                 type="email" 
                                 id="email" 
                                 placeholder="Enter your email" 
+                                required
                             />
                         </div>
                         <div className="form-group">
@@ -85,6 +87,8 @@ const SignUp = () => {
                                 type="password" 
                                 id="password" 
                                 placeholder="Enter your password" 
+                                required
+                                minLength={6}
                             />
                         </div>
                         <button type="submit" className="signup-btn">

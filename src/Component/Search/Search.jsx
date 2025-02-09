@@ -1,62 +1,55 @@
-import  { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import search from "../../assets/search.png";
+import "./Search.css";
 
 const Search = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [difficulty, setDifficulty] = useState("easy");
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      // Generate dynamic results based on the input query
-      const results = Array.from({ length: 5 }, (_, i) => `${searchQuery} Result ${i + 1}`);
-      setSearchResults(results);
+      navigate("/result", { state: { searchQuery, difficulty } });
     } else {
-      setSearchResults([]);
+      alert("Please enter a topic to search!");
     }
   };
 
   return (
-    <div>
-      {/* Logo Section */}
-      <header>
-        <h1>
-          Quiz<span>Fizz</span>
-        </h1>
+    <div className="search-page">
+      <header className="header-search">
+        <img src={logo} alt="QuizFizz Logo" className="logo-search" />
       </header>
-
-      {/* Main Content */}
-      <main>
-        {/* Search Section */}
-        <h2>SEARCH THE TOPIC HERE</h2>
-        <div>
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button onClick={handleSearch}>Search</button>
+      <main className="main-content-search">
+        <div className="image-container">
+          <img src={search} alt="Illustration" className="search-img" />
         </div>
-
-        {/* Display Search Results */}
-        {searchResults.length > 0 && (
-          <div>
-            <h3>Search Results:</h3>
-            <ul>
-              {searchResults.map((result, index) => (
-                <li key={index}>{result}</li>
-              ))}
-            </ul>
+        <div className="text-container-search">
+          <h2>SEARCH THE TOPIC HERE</h2>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button className="search-button" onClick={handleSearch}>
+              Search
+            </button>
           </div>
-        )}
-
-        {/* Difficulty Level Section */}
-        <div>
-          <h3>Select Difficulty Level:</h3>
-          <select>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
+          <div className="difficulty-container">
+            <h3>Select Difficulty Level:</h3>
+            <select
+              value={difficulty}
+              onChange={(e) => setDifficulty(e.target.value)}
+            >
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
         </div>
       </main>
     </div>

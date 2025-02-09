@@ -4,40 +4,58 @@ import google from "../../assets/google.png";
 import logo from "../../assets/logo.png";
 import signup from "../../assets/signup.png";
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { app } from '../../Firebase'; // Ensure app is imported from your Firebase config
+import { setDoc, doc } from "firebase/firestore";
+import { app, db } from '../../Firebase'; // Ensure db is imported from Firebase config
 import './SignUp.css';
 
 const auth = getAuth(app);
 const googleprovider = new GoogleAuthProvider();
 
 const SignUp = () => {
-    const [name, setName] = useState("");  // Default value is ""
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate(); // Define navigate using useNavigate hook
+    const navigate = useNavigate();
     
-    const createUser = (event) => {
-        event.preventDefault();  // Prevents page reload
-    
-        createUserWithEmailAndPassword(auth, email, password)
-          .then(() => {
-              alert("User created successfully");
-              navigate("/search"); // Redirect to search page
-          })
-          .catch((error) => {
-              alert(error.message); // Proper error handling
-          });
+    const createUser = async (event) => {
+        event.preventDefault();
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            const user = auth.currentUser;
+
+            console.log(user);
+
+            if (user) {
+                await setDoc(doc(db, "Users", user.uid), {
+                    email: user.email,
+                    firstName: name,
+                });
+            }
+            alert("User created successfully!");
+            navigate("/search");
+        } catch (error) {
+            alert(error.message);
+        }
     };
 
-    const signupWithGoogle = () => {
-        signInWithPopup(auth, googleprovider)
-        .then(() => {
-            alert("Signed up with Google successfully");
-            navigate("/search"); // Redirect to search page
-        })
-        .catch((error) => {
-            alert(error.message); // Error handling for Google sign-up
-        });
+    const signupWithGoogle = async () => {
+        try {
+            await signInWithPopup(auth, googleprovider);
+            const user = auth.currentUser;
+
+            console.log(user);
+
+            if (user) {
+                await setDoc(doc(db, "Users", user.uid), {
+                    email: user.email,
+                    firstName: user.displayName || "Unknown",
+                });
+            }
+            alert("Signed up with Google successfully!");
+            navigate("/search");
+        } catch (error) {
+            alert(error.message);
+        }
     };
 
     return (

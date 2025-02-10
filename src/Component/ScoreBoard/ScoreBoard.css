@@ -1,0 +1,199 @@
+/* Scoreboard.css */
+
+.scoreboard-page {
+    min-height: 100vh;
+    background-color: var(--violet);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scoreboard-header {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .scoreboard-header img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .scoreboard-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+  }
+  
+  .illustration-section {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .illustration-section img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .score-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .score-section h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .score-circle {
+    width: 180px;
+    height: 180px;
+    background-color: var(--periwinkle);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .score-circle p {
+    color: var(--dark-blue);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center-align buttons */
+    gap: 1.5rem; /* Space between buttons */
+    margin-top: 1.5rem; /* Added margin for spacing */
+}
+
+.home-button,
+.leaderboard-button {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem; /* Keep height same */
+    border-radius: 25px;
+    font-size: 1rem; /* Keep font size readable */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 170px; /* Slightly increased width */
+    text-align: center;
+    font-weight: bold;
+}
+
+.home-button:hover,
+.leaderboard-button:hover {
+    background-color: var(--lilac);
+    color: var(--black);
+}
+  
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .score-container {
+        gap: 2rem;
+        padding: 1rem;
+    }
+  
+    .score-section h2 {
+        font-size: 2.5rem;
+    }
+  
+    .score-circle {
+        width: 150px;
+        height: 150px;
+    }
+  
+    .score-circle p {
+        font-size: 2rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .score-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+  
+    .illustration-section {
+        max-width: 400px;
+    }
+  
+    .scoreboard-header img {
+        height: 45px;
+    }
+  
+    .score-section h2 {
+        font-size: 2rem;
+    }
+    .button-container {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .home-button,
+    .leaderboard-button {
+        width: 160px; /* Keep smaller width for smaller screens */
+    }
+}
+@media screen and (max-width: 480px) {
+    .scoreboard-page {
+        padding: 10px;
+    }
+  
+    .scoreboard-content {
+        padding: 1rem;
+    }
+  
+    .score-container {
+        gap: 2rem;
+    }
+  
+    .illustration-section {
+        max-width: 300px;
+    }
+  
+    .scoreboard-header img {
+        height: 35px;
+    }
+  
+    .score-circle {
+        width: 120px;
+        height: 120px;
+    }
+  
+    .score-circle p {
+        font-size: 1.8rem;
+    }
+  
+    .home-button,
+    .leaderboard-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 130px;
+    }
+}

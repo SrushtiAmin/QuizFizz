@@ -1,0 +1,165 @@
+/* Quiz.css */
+
+.quiz-page {
+    min-height: 100vh;
+    background-color: var(--violet);
+    padding: 20px;
+  }
+  
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .quiz-header img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .quiz-header button {
+    background-color: var(--white);
+    color: var(--violet);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quiz-header button:hover {
+    background-color: var(--grey);
+    color: var(--black);
+  }
+  
+  .quiz-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .quiz-content h2 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .quiz-question {
+    background-color: var(--periwinkle);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .option-item {
+    background-color: var(--periwinkle);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-item:hover {
+    background-color: var(--light-blue);
+  }
+  
+  .option-item label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .option-item input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+  }
+  /* Button container for Previous and Answer buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Space between buttons and question */
+}
+
+/* Styling for Previous and Answer buttons */
+.previous-button,
+.answer-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 120px; /* Ensures a consistent button size */
+  text-align: center;
+}
+
+/* Specific styles for Previous button */
+.previous-button {
+  background-color: var(--yellow) ;
+  color: var(--black);
+  font-weight: bold;
+}
+
+/* Specific styles for Answer button */
+.answer-button {
+  background-color: var(--dark-blue);
+  color: white;
+  font-weight: bold;
+}
+
+/* Disabled Previous button */
+.previous-button:disabled {
+  background-color: var(--grey);
+  cursor: not-allowed;
+}
+
+/* Responsive Design for Tablets */
+@media screen and (max-width: 768px) {
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Ensures buttons wrap if space is limited */
+    margin-top: 15px;
+  }
+
+  .previous-button,
+  .answer-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    min-width: 120px; /* Ensures consistent button size */
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .button-container {
+    flex-direction: column; /* Stacks buttons vertically on small screens */
+    gap: 10px;
+  }
+
+  .previous-button,
+  .answer-button {
+    width: 100%; /* Makes buttons full width for smaller screens */
+  }
+}

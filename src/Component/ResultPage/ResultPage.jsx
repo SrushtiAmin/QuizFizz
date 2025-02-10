@@ -15,7 +15,8 @@ const ResultPage = () => {
   }
 
   const handleStartQuiz = () => {
-    alert(`Starting quiz for topic: ${searchQuery}, Difficulty: ${difficulty}`);
+    // Navigate to QuizPage with searchQuery and difficulty
+    navigate("/quiz", { state: { searchQuery, difficulty } });
   };
 
   return (
@@ -37,12 +38,12 @@ const ResultPage = () => {
             </p>
             <p className="quiz-text">Then click on the Start Quiz button!</p>
             <div className="btn-result">
-            <button className="start-quiz-button" onClick={handleStartQuiz}>
-              Start Quiz
-            </button>
-            <button className="back-button" onClick={() => navigate(-1)}>
-              Back to Search
-            </button>
+              <button className="start-quiz-button" onClick={handleStartQuiz}>
+                Start Quiz
+              </button>
+              <button className="back-button" onClick={() => navigate(-1)}>
+                Back to Search
+              </button>
             </div>
           </div>
         </div>

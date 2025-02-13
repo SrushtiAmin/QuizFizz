@@ -121,4 +121,66 @@
   .cta-btn:active {
     transform: scale(0.98);
   }
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
   
+  
+  
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#D0CFFD;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  }
+  
+  .sidenav.open {
+  width: 180px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #040080;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Calistoga', cursive; 
+    font-weight: bold; 
+    font-size: 20px;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #0800FF;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    left: 20px; /* Aligns to the left */
+    top: 50%;
+    transform: translateY(-50%);
+  }

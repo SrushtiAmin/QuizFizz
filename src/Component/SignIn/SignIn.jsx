@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import signin from "../../assets/signin.png"; 
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { app, db } from "../../Firebase";
+import { app, db } from "../../firebase";
 import { getDoc, doc } from "firebase/firestore";
 import google from "../../assets/google.png"; 
 import './SignIn.css';

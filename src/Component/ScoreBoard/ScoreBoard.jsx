@@ -47,7 +47,7 @@ const Scoreboard = () => {
   return (
     <div className="scoreboard-page">
       <header className="scoreboard-header">
-        <img src={logo} alt="quiz-logo" />
+        <img src={logo} alt="quiz-logo" className="scoreboard-logo" />
       </header>
       <main className="scoreboard-content">
         <div className="score-container">

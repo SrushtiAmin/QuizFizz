@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import signup from "../../assets/signup.png";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { setDoc, doc, getDocs, collection, query, where } from "firebase/firestore";
-import { app, db } from "../../Firebase";
+import { app, db } from "../../firebase";
 import "./SignUp.css";
 
 const auth = getAuth(app);

@@ -11,9 +11,19 @@ const Scoreboard = () => {
   // Retrieve answers from location.state or sessionStorage
   const storedAnswers = sessionStorage.getItem("quizAnswers");
   const answers = location.state?.answers || (storedAnswers ? JSON.parse(storedAnswers) : []);
-
+  
+  // This is the total number of questions that were in the quiz
   const totalQuestions = answers.length;
-  const correctAnswers = answers.filter((answer) => answer.isCorrect).length;
+
+  // Count only the correct answers
+  const correctAnswers = answers.filter(
+    (answer) => answer.selectedOption !== undefined && answer.isCorrect
+  ).length;
+
+  // Count attempted questions (for display purposes)
+  const attemptedQuestions = answers.filter(
+    (answer) => answer.selectedOption !== undefined
+  ).length;
 
   // Store answers in sessionStorage for persistence
   useEffect(() => {
@@ -25,12 +35,10 @@ const Scoreboard = () => {
   // Handle Back Navigation (Redirect to Search Page only once)
   useEffect(() => {
     const handleBackButton = () => {
-      navigate("/search", { replace: true }); // Redirect only once
+      navigate("/search", { replace: true });
     };
-
-    window.history.replaceState({ redirected: true }, ""); // Set a flag
+    window.history.replaceState({ redirected: true }, "");
     window.addEventListener("popstate", handleBackButton);
-
     return () => {
       window.removeEventListener("popstate", handleBackButton);
     };
@@ -49,8 +57,9 @@ const Scoreboard = () => {
           <div className="score-section">
             <h2>SCORE</h2>
             <div className="score-circle">
-              <p>{correctAnswers}/{totalQuestions}</p>
+              <p>{correctAnswers} / {totalQuestions}</p>
             </div>
+            <p className="answered-text">Attempted: {attemptedQuestions} / {totalQuestions}</p>
             <div className="button-container">
               <button className="home-button" onClick={() => navigate("/", { replace: true })}>
                 Go to Home
